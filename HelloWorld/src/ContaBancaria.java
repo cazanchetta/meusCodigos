@@ -28,5 +28,9 @@ public class ContaBancaria {
 	public void saque(final double valor) {
 		this.saldo -= valor;
 	}
+	
+	public String getTipo() {
+		return "Conta";
+	}
 
 }
