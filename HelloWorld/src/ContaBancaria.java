@@ -1,4 +1,4 @@
-public class ContaBancaria {
+public abstract class ContaBancaria {
 	
 	private String titular;
 	private double saldo;
@@ -29,8 +29,6 @@ public class ContaBancaria {
 		this.saldo -= valor;
 	}
 	
-	public String getTipo() {
-		return "Conta";
-	}
+	public abstract String getTipo();
 
 }
