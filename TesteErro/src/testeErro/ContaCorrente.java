@@ -26,14 +26,14 @@ public class ContaCorrente {
 	}
 
 	public void deposita(Double valor) {
-		this.saldo =+ valor;
+		this.saldo += valor;
 	}
 	
 	public void saca(Double valor) throws SaldoInsuficiente {
 		if(this.saldo < valor) {
 			throw new SaldoInsuficiente("Saldo Insuficiente");
 		}
-		this.saldo =- valor;
+		this.saldo -= valor;
 	}
 
 	public double getSaldo() {

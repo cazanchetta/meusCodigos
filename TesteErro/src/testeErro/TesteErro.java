@@ -37,14 +37,15 @@ public class TesteErro {
 	}
 	
 	private static void metodo3(ContaCorrente cc) {
+		
 		Double valueDeposita = Double.valueOf(JOptionPane.showInputDialog("valor de deposito: "));
 		cc.deposita(valueDeposita);
+		
 		System.out.println("Valor final: ");
 		System.out.println(cc.getSaldo());
 		
-		ContaCorrente c2 = new ContaCorrente("Jose", "Rua 2", "987654", LocalDate.of(1987, 07, 15), LocalDate.of(2019, 10, 31));
-		
-		boolean cpf = cc.equals(c2);
+//		ContaCorrente c2 = new ContaCorrente("Jose", "Rua 2", "987654", LocalDate.of(1987, 07, 15), LocalDate.of(2019, 10, 31));
+//		boolean cpf = cc.equals(c2);
 		
 		Double valueSaca = Double.valueOf(JOptionPane.showInputDialog("valor do saque: "));
 		try {
@@ -54,6 +55,10 @@ public class TesteErro {
 		}		
 		System.out.println("valor final 2: " + cc.getSaldo());
 		System.out.println("data nascimento: " + cc.getDataNascimento());
+		
+		ClassificacaoClientes.BAIXO.isCompatible(cc);
+		ClassificacaoClientes.MEDIO.isCompatible(cc);
+		ClassificacaoClientes.POTENCIAL.isCompatible(cc);
 	}
 
 }
